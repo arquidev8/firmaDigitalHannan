@@ -1,0 +1,306 @@
+.container {
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+
+.logo{
+   
+   margin-top: 50px;
+}
+
+.cabecera{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: start;
+    margin-top: -50px;
+    gap: 50px;
+
+}
+.titulo{
+    margin-left: 140px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.form-1{
+    width: 270px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: -30px;
+    margin-top: 50px;
+}
+
+.form-2{
+    width: 370px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: -30px;
+    margin-top: 100px;
+}
+
+.certifico{
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: -30px;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.firmas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+}
+
+.visita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.agente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.line-form > span{
+    font-weight: bold;
+}
+
+.descargar{
+    margin-left: 250px;
+    background-color: cadetblue;
+    color: aliceblue;
+    height: 40px;
+    width: 150px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+   
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos-firmas{
+    margin-left: 90px;
+}
+
+
+@media (max-width: 400px) {
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin-top: 500px;
+        margin-bottom: 500px;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    /* .logo{
+     
+   
+     margin-top: 60px;
+    } */
+    
+    .cabecera{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: start;
+        margin-top: -50px;
+        gap: 50px;
+    
+    }
+    .titulo{
+        margin-left: 140px;
+    }
+    
+    body {
+   
+        padding-bottom: 100px;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        position: relative;
+
+    }
+    html, body {
+        overflow-x: hidden;
+      }
+    
+    .form-1{
+        width: 270px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 190px;
+        margin-top: 50px;
+    }
+    
+    .form-2{
+        width: 370px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 190px;
+        margin-top: 100px;
+    }
+    
+    .certifico{
+        width: 700px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: -30px;
+        text-align: justify;
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+
+    .certifico > p{
+       width: 300px;
+       margin-left: 215px;
+    }
+
+    .certifico > h3{
+        width: 300px;
+        margin-left: 215px;
+     }
+    
+    .firmas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+    }
+    
+    .visita{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        gap: 20px;
+    }
+    .firmaCliente{
+        margin-left: -120px;
+    }
+
+    .firmaAgente{
+        margin-left: -80px;
+    }
+
+    .visita > p{
+       
+        margin-left: -150px;
+    }
+    
+    
+    .agente{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 70px;
+        gap: 20px;
+    }
+    .agente > img{
+       
+        margin-left: -90px;
+    }
+
+    .agente > p{
+       
+        margin-left: -55px;
+    }
+    
+    .line-form{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .descargar{
+       
+        background-color: cadetblue;
+        color: aliceblue;
+        height: 40px;
+        width: 150px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+       
+    }
+
+    button{
+        margin-left: 250px;
+    }
+
+    .textos-firmas{
+        margin-left: 10px;
+    }
+
+
+    
+   
+}

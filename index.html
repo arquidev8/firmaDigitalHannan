@@ -5,32 +5,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitar firma de usuario - By Parzibyte</title>
+    <title>CONTRATO</title>
     <link rel="stylesheet" href="estilo.css">
+
+
 </head>
 
 <body>
+    <div class="container">
+
+
     <img class="logo" src="https://i.postimg.cc/2SLm5vL1/Artboard-1.png" alt="">
-    <h1>Parte de Visitas</h1>
+    <h1>PARTE DE VISITA</h1>
 
-    <div>
+    <form >
 
-        <label for="nombre">Nombre:</label>
-        <input class="inputs" type="text" id="nombre">
+        <h3>IDENTIFICACIÓN INMUEBLE:</h3>
 
-        <label for="apellido">Apellido:</label>
-        <input class="inputs"  type="text" id="apellido">
+        <div class="line-form"><span>Ref.Propiedad:</span> <input id="referencia" type="text"></div>
+        <div class="line-form"><span>Dirección:</span> <input id="direccion" type="text"></div>
+        <div class="line-form"><span>Población:</span> <input id="poblacion" type="text"></div>
+        <div class="line-form"><span>Precio: </span> <input id="precio" type="text"></div>
 
-        <label for="correo">Correo:</label>
-        <input class="inputs"  type="email" id="correo">
+    </form>
 
+    <form >
+
+        <h3>IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
+
+        <div class="line-form"><span>NOMBRE/Name:</span> <input id="nombre" type="text"></div>
+        <div class="line-form"><span>DNI/Passport: </span> <input id="pasaporte" type="text"></div>
+        <div class="line-form"><span>CIUDAD/City:</span> <input id="ciudad" type="text"></div>
+        <div class="line-form"><span>PAÍS/Country:</span> <input id="pais" type="text"></div>
+
+    </form>
+
+    <div class="certifico">
+        <h3>CERTIFICO:</h3>
+        <p>Que he visitado el inmueble identificado arriba por estar interesado/a en su 
+            posible adquisición. La firma del presente parte de visita, solo justifica que he 
+            visitado y recibido la información sobre el precio y las formas de pago. Me 
+            comprometo a no realizar ninguna gestión encaminada a comprar/arrendar sin la 
+            intervención del agente comercial que me ha enseñado la propiedad, por medio de 
+            apoderado, o por conducto de terceras personas el inmueble visitado ni a parientes en línea 
+            directa o colateral, para que sean ellos los que realicen la compraventa, evitando que 
+            intervenga el Agente Inmobiliario.</p>
+        <h3>OBSERVACIONES:</h3>
+        <div class="form-line"><span> </span> <input id="observaciones" type="text"></div>
     </div>
 
+<div class="firmas">
+    <form class="visita">
+        <div class="form"><input id="visita" class="input-2" type="date"></div>
+        <div class="textos-firmas">
+            <span style="white-space: nowrap; margin-left: -150px;">Fecha de visita / Date of Visit</span>
+        </div>
     
+        <canvas id="canvas"></canvas>
+        <div class="textos-firmas">
+            <span style="white-space: nowrap; margin-left: -80px;">Firma / Signature</span>
+        </div>
+    </form>
 
-    <p>Firmar a continuación:</p>
-    <canvas id="canvas"></canvas>
-    <br>
+    <form class="agente">
+        <div class="form"><input id="agente" class="input-2" type="text"></div>
+        <div class="textos-firmas">
+            <span style="white-space: nowrap; margin-left: -80px;">Agente Inmobiliario<span>
+        </div>
+
+        <canvas id="canvas2" width="250" height="120"></canvas>
+        <div class="textos-firmas">
+            <span style="white-space: nowrap; margin-left: -80px">Firma / Signature </span> 
+        </div>
+    </form>
+    
+</div>
     <div class="botonera">
         <button id="btnLimpiar">Limpiar</button>
         <button hidden id="btnDescargar">Descargar</button>
@@ -40,6 +89,11 @@
     
     <a hidden href="https://hannan-piper.com">By hannan-piper</a>
     <script src="script.js"></script>
+
+
+
+</div>
+
 </body>
 
 </html>
