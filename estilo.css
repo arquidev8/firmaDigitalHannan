@@ -1,11 +1,11 @@
-#canvas {
+/* #canvas {
     border: 1px solid black;
 }
 #canvas2 {
     border: 1px solid black;
-}
+} */
 
-body {
+/* body {
     padding: 400px;
     display: flex;
     flex-direction: column;
@@ -312,7 +312,7 @@ form span {
         margin-left: 0; /* Elimina el margen izquierdo */
     }
 }
-
+ */
 
 
 

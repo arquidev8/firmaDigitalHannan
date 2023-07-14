@@ -6,43 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTRATO</title>
-    <link rel="stylesheet" href="estilo.css">
+    <!-- <link rel="stylesheet" href="estilo.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid mx-auto p-20 max-sm:p-5">
 
 
-    <img class="logo" src="https://i.postimg.cc/2SLm5vL1/Artboard-1.png" alt="">
-    <h1>PARTE DE VISITA</h1>
+    <img class="w-25 md:w-60 lg:w-60" src="https://i.postimg.cc/2SLm5vL1/Artboard-1.png" alt="">
+    <h1 class="text-center py-4 font-bold">PARTE DE VISITA</h1>
 
-    <form >
+    <form class="w-full py-5 " >
 
-        <h3>IDENTIFICACIÓN INMUEBLE:</h3>
+        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN INMUEBLE:</h3>
 
-        <div class="line-form"><span>Ref.Propiedad:</span> <input id="referencia" type="text"></div>
-        <div class="line-form"><span>Dirección:</span> <input id="direccion" type="text"></div>
-        <div class="line-form"><span>Población:</span> <input id="poblacion" type="text"></div>
-        <div class="line-form"><span>Precio: </span> <input id="precio" type="text"></div>
-
-    </form>
-
-    <form >
-
-        <h3>IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
-
-        <div class="line-form"><span>NOMBRE/Name:</span> <input id="nombre" type="text"></div>
-        <div class="line-form"><span>DNI/Passport: </span> <input id="pasaporte" type="text"></div>
-        <div class="line-form"><span>CIUDAD/City:</span> <input id="ciudad" type="text"></div>
-        <div class="line-form"><span>PAÍS/Country:</span> <input id="pais" type="text"></div>
+        <div class="line-form font-medium py-2"><span>Ref.Propiedad:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="referencia" type="text"></div>
+        <div class="line-form font-medium py-2"><span>Dirección:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="direccion" type="text"></div>
+        <div class="line-form font-medium py-2"><span>Población:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="poblacion" type="text"></div>
+        <div class="line-form font-medium py-2"><span>Precio: </span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="precio" type="text"></div>
 
     </form>
 
-    <div class="certifico">
-        <h3>CERTIFICO:</h3>
-        <p>Que he visitado el inmueble identificado arriba por estar interesado/a en su 
+    <form class="w-full py-5" >
+
+        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
+
+        <div class="line-form font-medium py-2"><span>NOMBRE/Name:</span> <input class="block w-full rounded border-solid border-2 border-gray-200 " id="nombre" type="text"></div>
+        <div class="line-form font-medium py-2"><span>DNI/Passport: </span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="pasaporte" type="text"></div>
+        <div class="line-form font-medium py-2"><span>CIUDAD/City:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="ciudad" type="text"></div>
+        <div class="line-form font-medium py-2"><span>PAÍS/Country:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="pais" type="text"></div>
+
+    </form>
+
+    <div class="certifico w-full py-3">
+        <h3 class="text-center py-5 font-bold">CERTIFICO:</h3>
+        <p class="text-justify">Que he visitado el inmueble identificado arriba por estar interesado/a en su 
             posible adquisición. La firma del presente parte de visita, solo justifica que he 
             visitado y recibido la información sobre el precio y las formas de pago. Me 
             comprometo a no realizar ninguna gestión encaminada a comprar/arrendar sin la 
@@ -50,51 +51,55 @@
             apoderado, o por conducto de terceras personas el inmueble visitado ni a parientes en línea 
             directa o colateral, para que sean ellos los que realicen la compraventa, evitando que 
             intervenga el Agente Inmobiliario.</p>
-        <h3>OBSERVACIONES:</h3>
-        <div class="form-line"><span> </span> <input id="observaciones" type="text"></div>
+        <h3 class="text-center py-5 font-bold">OBSERVACIONES:</h3>
+        <div class="form-line"><span> </span> <input class="block w-full rounded border-solid border-2 border-gray-200 h-20" id="observaciones" type="text"></div>
     </div>
 
-<div class="firmas">
-    <form class="visita">
-        <div class="form"><input id="visita" class="input-2" type="date"></div>
-        <div class="textos-firmas">
-            <span style="white-space: nowrap; margin-left: -150px;">Fecha de visita / Date of Visit</span>
+<div class="firmas container-fluid w-full py-3 my-20">
+
+    <form class="visita w-full ">
+        <div class="form text-center"><input id="visita" class="input-2" type="date"></div>
+        <div class="text-center ">
+            <span class="text-center font-bold">Fecha de visita / Date of Visit</span>
         </div>
     
-        <canvas id="canvas"></canvas>
-        <div class="textos-firmas">
-            <span style="white-space: nowrap; margin-left: -80px;">Firma / Signature</span>
+        
+            <canvas class="m-auto border-solid border-2 border-gray-200 " id="canvas" ></canvas>    
+        
+
+        <div class="text-center">
+            <span class="text-center font-bold">Firma / Signature</span>
         </div>
     </form>
 
-    <form class="agente">
-        <div class="form"><input id="agente" class="input-2" type="text"></div>
-        <div class="textos-firmas">
-            <span style="white-space: nowrap; margin-left: -80px;">Agente Inmobiliario<span>
+    <form class="agente w-full ">
+        <div class="form text-center"><input class=" w-80 rounded border-solid border-2 border-gray-200 h-10" id="agente" class="input-2" type="text"></div>
+        <div class="text-center font-bold py-6">
+            <span class="">Agente Inmobiliario<span>
         </div>
 
-        <canvas id="canvas2" width="250" height="120"></canvas>
-        <div class="textos-firmas">
-            <span style="white-space: nowrap; margin-left: -80px">Firma / Signature </span> 
+        
+        <canvas class="m-auto border-solid border-2 border-gray-200" id="canvas2" ></canvas>
+        
+   
+        <div class="text-center font-bold">
+            <span class="text-center font-bold">Firma / Signature </span> 
         </div>
     </form>
     
-</div>
-    <div class="botonera">
-        <button id="btnLimpiar">Limpiar</button>
+    </div>
+
+    <div class=" grid grid-cols-2 gap-y-5 h-60 text-white font-bold gap-10 max-sm:grid-cols-1">
+        <button class="bg-red-500 hover:bg-red-200 h-10 rounded" id="btnLimpiar">Limpiar</button>
         <button hidden id="btnDescargar">Descargar</button>
-        <button id="btnGenerarDocumento">Pasar a documento</button>
+        <button class="bg-green-500 hover:bg-green-200 h-10 rounded" id="btnGenerarDocumento">Pasar a documento</button>
         <br>
     </div>
-    
+
+</div>   
     <a hidden href="https://hannan-piper.com">By hannan-piper</a>
     <script src="script.js"></script>
 
-
-
-</div>
-
 </body>
-
 </html>
 

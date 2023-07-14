@@ -5,12 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parte de Visita</title>
-  <link rel="stylesheet" href="./documento.css">
-
-  
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="./documento.css"> -->
 
   <style>
       img {
@@ -26,56 +22,53 @@
   </style>
 </head>
 
-<body>
+<body class="">
+  <div class="container-fluid  p-20 max-sm:p-5">
+  <img class="logo2 w-2/4" src="https://i.postimg.cc/FsX7d6Mf/Artboard-1.png" alt="">
 
-  <img class="logo2" width="150" src="https://i.postimg.cc/FsX7d6Mf/Artboard-1.png" alt="">
-
-  <div class="container">
-
-
-    <form class="form-1">
-        <h3>IDENTIFICACIÓN INMUEBLE:</h3>
-        <div class="line-form">
-          <span><strong> Ref.Propiedad: </strong></span>
+    <form class="form-1 w-full py-5 ">
+        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN INMUEBLE:</h3>
+        <div class="line-form grid grid-cols-2 justify-content-start align-items-center">
+          <span class="font-bold py-2"> Ref.Propiedad: </span>
           <p id="referencia"></p>
         </div>
-        <div class="line-form">
-          <span>Dirección: </span>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">Dirección: </span>
           <p id="direccion"></p>
         </div>
-        <div class="line-form">
-          <span>Población: </span>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">Población: </span>
           <p id="poblacion"></p>
         </div>
-        <div class="line-form">
-          <span>Precio: </span>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">Precio: </span>
           <p id="precio"></p>
         </div>
       </form>
       
-      <form class="form-2">
-        <h3>IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
-        <div class="line-form">
-          <span>NOMBRE/Name: </span>
+      <form class="form-2 form-1 w-full py-5 ">
+        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">NOMBRE/Name: </span>
           <p id="nombre"></p>
         </div>
-        <div class="line-form">
-          <span>DNI/Passport: </span>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">DNI/Passport: </span>
           <p id="pasaporte"></p>
         </div>
-        <div class="line-form">
-          <span>CIUDAD/City: </span>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">CIUDAD/City: </span>
           <p id="ciudad"></p>
         </div>
-        <div class="line-form">
-          <span>PAÍS/Country: </span>
+        <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
+          <span class="font-bold py-2">PAÍS/Country: </span>
           <p id="pais"></p>
         </div>
       </form>  
 
-  <div class="certifico">
-      <h3>CERTIFICO:</h3>
-      <p>Que he visitado el inmueble identificado arriba por estar interesado/a en su 
+  <div class="certifico certifico w-full py-3">
+      <h3 class="text-center py-5 font-bold">CERTIFICO:</h3>
+      <p class="text-justify">Que he visitado el inmueble identificado arriba por estar interesado/a en su 
           posible adquisición. La firma del presente parte de visita, solo justifica que he 
           visitado y recibido la información sobre el precio y las formas de pago. Me 
           comprometo a no realizar ninguna gestión encaminada a comprar/arrendar sin la 
@@ -84,62 +77,61 @@
           directa o colateral, para que sean ellos los que realicen la compraventa, evitando que 
           intervenga el Agente Inmobiliario.
       </p>
-      <h3>OBSERVACIONES:</h3>
+      <h3 class="text-center py-5 font-bold">OBSERVACIONES:</h3>
       <p id="observaciones"></p>
       <div class="form-line"></div>
      
   </div>
 
-<div class="firmas">
-  <form class="visita">
-      <p id="visita"></p>
-      <div class="form">
+<div class="firmas container-fluid w-full py-3 my-20">
+
+  <form class="visita w-full grid grid-cols-1 justify-content-center align-items-center">
+      <p id="visita text-center"></p>
+      <div class="form text-center">
+
       <div class="textos-firmas">
-          <span style="white-space: nowrap; margin-left: -150px;"><strong>Fecha de visita / Date of Visit</strong> </span>
+          <span class="text-center font-bold"><strong>Fecha de visita / Date of Visit</strong> </span>
       </div> 
       <br>
       <img class="firmaCliente" src="" alt="Firma del usuario" id="firma">
       <br>
       <div class="textos-firmas">
-          <span style="white-space: nowrap; margin-left: -120px;"><strong>Firma / Signature</strong> </span>
+          <span class="text-center font-bold"><strong>Firma / Signature</strong> </span>
       </div>
 
-    </div>
+      </div>
   </form>
   
-  <form class="agente">
-      <p id="agente"></p>
-      <div class="form">
+  <form class="agente w-full grid grid-cols-1 justify-content-center align-items-center">
+      <p id="agente text-center"></p>
+
+      <div class="form  text-center">
+
       <div class="textos-firmas">
-          <span style="white-space: nowrap; margin-left: -80px;"><strong>Agente Inmobiliario</strong> <span>
+          <span class="text-center font-bold"><strong>Agente Inmobiliario</strong> <span>
       </div>
       <br>
       <img class="firmaAgente" src="" alt="Firma del usuario" id="firma2">
       <br>
       <div class="textos-firmas">
-          <span style="white-space: nowrap; margin-left: -80px"><strong> Firma / Signature</strong> </span> 
+          <span class="text-center font-bold"><strong> Firma / Signature</strong> </span> 
       </div>
 
-    </div>
+      </div>
   </form>
-
-
-
-
-
-  
-
 </div>
 
   <br>
   <!-- <a href="https://hannan-piper.com">By Hannan-piper</a> -->
-  <button class="descargar" id="descargar">Descargar PDF</button>
-
+  <div class="grid grid-cols-1 justify-content-center align-items-center">
+    <button class="descargar w-2/4 bg-green-500 hover:bg-red-200 h-25 text-white p-2 rounded mx-auto  mb-10" id="descargar">Descargar PDF</button>
+  </div>
 </div>
   <script>
     
       if (window.opener) {
           document.querySelector("#firma").src = window.opener.obtenerImagen();
+          document.querySelector("#firma2").src = window.opener.obtenerImagen2();
           // Imprimir documento. Si no quieres imprimir, remueve la siguiente línea
          
       }
@@ -164,8 +156,5 @@
       document.querySelector("#firma2").src = window.opener.obtenerImagen2();
   }
   </script>
-  
-
 </body>
-
 </html>

@@ -15,12 +15,8 @@ let haComenzadoDibujo = false; // Bandera que indica si el usuario está presion
 const $canvas2 = document.querySelector("#canvas2");
 const contexto2 = $canvas2.getContext("2d");
 
-
-$canvas.width = 250;
-$canvas.height = 120;
-
-
-
+// $canvas.width = 250;
+// $canvas.height = 120;
 const limpiarCanvas = () => {
     // Colocar color blanco en fondo de canvas
     contexto.fillStyle = COLOR_FONDO;
@@ -44,9 +40,11 @@ window.obtenerImagen = () => {
     return $canvas.toDataURL();
 };
 
-$btnGenerarDocumento.onclick = () => {
-    window.open("documento.html");
+window.obtenerImagen2 = () => {
+    return $canvas2.toDataURL();
 };
+
+
 // Lo demás tiene que ver con pintar sobre el canvas en los eventos del mouse
 $canvas.addEventListener("mousedown", evento => {
     // En este evento solo se ha iniciado el clic, así que dibujamos un punto
@@ -106,10 +104,10 @@ $btnLimpiar.onclick = function() {
 };
 
 
-window.obtenerImagen2 = () => {
-    return $canvas2.toDataURL();
-};
 
+$btnGenerarDocumento.onclick = () => {
+    window.open("documento.html");
+};
 
 $canvas2.addEventListener("mousedown", evento => {
     // En este evento solo se ha iniciado el clic, así que dibujamos un punto
@@ -185,6 +183,12 @@ $canvas.addEventListener("touchmove", evento => {
     contexto.lineWidth = GROSOR;
     contexto.stroke();
     contexto.closePath();
+    
+
+  
+    evento.preventDefault();
+
+
 });
 
 $canvas.addEventListener("touchend", () => {
@@ -219,16 +223,12 @@ $canvas2.addEventListener("touchmove", evento => {
     contexto2.lineWidth = GROSOR;
     contexto2.stroke();
     contexto2.closePath();
+    evento.preventDefault();
 });
 
 $canvas2.addEventListener("touchend", () => {
     haComenzadoDibujo = false;
 });
-
-
-
-
-
 
 
 
