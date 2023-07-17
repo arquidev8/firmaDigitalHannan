@@ -8,39 +8,28 @@
     <title>CONTRATO</title>
     <!-- <link rel="stylesheet" href="estilo.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
 </head>
-
 <body>
     <div class="container-fluid mx-auto p-20 max-sm:p-5">
-
-
     <img class="w-25 md:w-60 lg:w-60" src="https://i.postimg.cc/2SLm5vL1/Artboard-1.png" alt="">
     <h1 class="text-center py-4 font-bold">PARTE DE VISITA</h1>
 
     <form class="w-full py-5 " >
-
         <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN INMUEBLE:</h3>
-
-        <div class="line-form font-medium py-2"><span>Ref.Propiedad:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="referencia" type="text"></div>
-        <div class="line-form font-medium py-2"><span>Dirección:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="direccion" type="text"></div>
-        <div class="line-form font-medium py-2"><span>Población:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="poblacion" type="text"></div>
-        <div class="line-form font-medium py-2"><span>Precio: </span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="precio" type="text"></div>
-
+        <div class="line-form font-medium py-2"><span>REF. PROPIEDAD / Ref: Property</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="referencia" type="text"></div>
+        <div class="line-form font-medium py-2"><span>DIRECCIÓN / Direction:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="direccion" type="text"></div>
+        <div class="line-form font-medium py-2"><span>POBLACÍÓN / Population:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="poblacion" type="text"></div>
+        <div class="line-form font-medium py-2"><span>PRECIO / Price: </span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="precio" type="text"></div>
     </form>
-
     <form class="w-full py-5" >
-
         <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
-
-        <div class="line-form font-medium py-2"><span>NOMBRE/Name:</span> <input class="block w-full rounded border-solid border-2 border-gray-200 " id="nombre" type="text"></div>
-        <div class="line-form font-medium py-2"><span>DNI/Passport: </span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="pasaporte" type="text"></div>
-        <div class="line-form font-medium py-2"><span>CIUDAD/City:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="ciudad" type="text"></div>
-        <div class="line-form font-medium py-2"><span>PAÍS/Country:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="pais" type="text"></div>
-
+        <div class="line-form font-medium py-2"><span>NOMBRE / Name:</span> <input class="name block w-full rounded border-solid border-2 border-gray-200 "  id="nombre" type="text"></div>
+        <div class="line-form font-medium py-2"><span>DNI / Passport: </span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="pasaporte" type="text"></div>
+        <div class="line-form font-medium py-2"><span>CIUDAD / City:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="ciudad" type="text"></div>
+        <div class="line-form font-medium py-2"><span>PAÍS / Country:</span> <input class="block w-full rounded border-solid border-2 border-gray-200" id="pais" type="text"></div>
     </form>
-
     <div class="certifico w-full py-3">
         <h3 class="text-center py-5 font-bold">CERTIFICO:</h3>
         <p class="text-justify">Que he visitado el inmueble identificado arriba por estar interesado/a en su 
@@ -54,52 +43,38 @@
         <h3 class="text-center py-5 font-bold">OBSERVACIONES:</h3>
         <div class="form-line"><span> </span> <input class="block w-full rounded border-solid border-2 border-gray-200 h-20" id="observaciones" type="text"></div>
     </div>
-
 <div class="firmas container-fluid w-full py-3 my-20">
-
     <form class="visita w-full ">
         <div class="form text-center"><input id="visita" class="input-2" type="date"></div>
         <div class="text-center ">
             <span class="text-center font-bold">Fecha de visita / Date of Visit</span>
-        </div>
-    
-        
+        </div>    
             <canvas class="m-auto border-solid border-2 border-gray-200 " id="canvas" ></canvas>    
         
-
         <div class="text-center">
             <span class="text-center font-bold">Firma / Signature</span>
         </div>
     </form>
-
     <form class="agente w-full ">
         <div class="form text-center"><input class=" w-80 rounded border-solid border-2 border-gray-200 h-10" id="agente" class="input-2" type="text"></div>
         <div class="text-center font-bold py-6">
             <span class="">Agente Inmobiliario<span>
-        </div>
-
-        
-        <canvas class="m-auto border-solid border-2 border-gray-200" id="canvas2" ></canvas>
-        
-   
+        </div>       
+        <canvas class="m-auto border-solid border-2 border-gray-200" id="canvas2" ></canvas>  
         <div class="text-center font-bold">
             <span class="text-center font-bold">Firma / Signature </span> 
         </div>
-    </form>
-    
+    </form>   
     </div>
-
     <div class=" grid grid-cols-2 gap-y-5 h-60 text-white font-bold gap-10 max-sm:grid-cols-1">
         <button class="bg-red-500 hover:bg-red-200 h-10 rounded" id="btnLimpiar">Limpiar</button>
         <button hidden id="btnDescargar">Descargar</button>
-        <button class="bg-green-500 hover:bg-green-200 h-10 rounded" id="btnGenerarDocumento">Pasar a documento</button>
+        <button class="bg-green-500 hover:bg-green-200 h-10 rounded" id="btnGenerarDocumento">Enviar</button>
         <br>
     </div>
-
 </div>   
     <a hidden href="https://hannan-piper.com">By hannan-piper</a>
     <script src="script.js"></script>
-
 </body>
 </html>
 

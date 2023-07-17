@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parte de Visita</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/vfs_fonts.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <link rel="stylesheet" href="./documento.css"> -->
 
   <style>
       img {
@@ -22,52 +23,55 @@
   </style>
 </head>
 
-<body class="">
-  <div class="container-fluid  p-20 max-sm:p-5">
+<body id="container">
+  <div class="container-fluid p-20 max-sm:p-5">
   <img class="logo2 w-2/4" src="https://i.postimg.cc/FsX7d6Mf/Artboard-1.png" alt="">
 
+    <br>
+    <h1 class="text-center w-18 py-4 font-bold">PARTE DE VISITA</h1>
+    
     <form class="form-1 w-full py-5 ">
-        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN INMUEBLE:</h3>
+        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN INMUEBLE / Property Identification:</h3>
         <div class="line-form grid grid-cols-2 justify-content-start align-items-center">
-          <span class="font-bold py-2"> Ref.Propiedad: </span>
+          <span class="font-bold py-2"> REF. PROPIEDAD / Ref: Property </span>
           <p id="referencia"></p>
         </div>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">Dirección: </span>
+          <span class="font-bold py-2">DIRECCIÓN / Direction: </span>
           <p id="direccion"></p>
         </div>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">Población: </span>
+          <span class="font-bold py-2">POBLACÍÓN / Population: </span>
           <p id="poblacion"></p>
         </div>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">Precio: </span>
+          <span class="font-bold py-2">PRECIO / Price: </span>
           <p id="precio"></p>
         </div>
       </form>
       
       <form class="form-2 form-1 w-full py-5 ">
-        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN CLIENTE INTERESADO:</h3>
+        <h3 class="text-center py-5 font-bold">IDENTIFICACIÓN CLIENTE INTERESADO / Interested client identification:</h3>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">NOMBRE/Name: </span>
+          <span class="font-bold py-2">NOMBRE / Name: </span>
           <p id="nombre"></p>
         </div>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">DNI/Passport: </span>
+          <span class="font-bold py-2">DNI / Passport: </span>
           <p id="pasaporte"></p>
         </div>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">CIUDAD/City: </span>
+          <span class="font-bold py-2">CIUDAD / City: </span>
           <p id="ciudad"></p>
         </div>
         <div class="line-form grid grid-cols-2 justify-content-center align-items-center">
-          <span class="font-bold py-2">PAÍS/Country: </span>
+          <span class="font-bold py-2">PAÍS / Country: </span>
           <p id="pais"></p>
         </div>
       </form>  
 
   <div class="certifico certifico w-full py-3">
-      <h3 class="text-center py-5 font-bold">CERTIFICO:</h3>
+      <h3 class="text-center py-5 font-bold">CERTIFICO / I Certify:</h3>
       <p class="text-justify">Que he visitado el inmueble identificado arriba por estar interesado/a en su 
           posible adquisición. La firma del presente parte de visita, solo justifica que he 
           visitado y recibido la información sobre el precio y las formas de pago. Me 
@@ -75,47 +79,49 @@
           intervención del agente comercial que me ha enseñado la propiedad, por medio de 
           apoderado, o por conducto de terceras personas el inmueble visitado ni a parientes en línea 
           directa o colateral, para que sean ellos los que realicen la compraventa, evitando que 
-          intervenga el Agente Inmobiliario.
+          intervenga el Agente Inmobiliario. / I certify that I have visited the property identified above 
+          as I am interested in its potential acquisition. The signature on this visit document only confirms 
+          that I have visited and received information about the price and payment methods. I commit to not 
+          undertaking any actions aimed at buying/renting the visited property without the involvement of the 
+          commercial agent who showed me the property, either through a representative or through 
+          third parties, including direct or collateral relatives, so that they are the ones who carry out 
+          the purchase, thus avoiding the involvement of the Real Estate Agent.
       </p>
-      <h3 class="text-center py-5 font-bold">OBSERVACIONES:</h3>
+      <h3 class="text-center py-5 font-bold">OBSERVACIONES / OBSERVATIONS</h3>
       <p id="observaciones"></p>
-      <div class="form-line"></div>
-     
+      <div class="form-line"></div>     
   </div>
-
+  <p class="text-center" id="visita"></p>
 <div class="firmas container-fluid w-full py-3 my-20 grid grid-cols-1 justify-content-center align-items-center">
 
-  <form class="visita w-full grid grid-cols-1 justify-content-center align-items-center">
-      <p class="text-center" id="visita"></p>
-      <div class="form text-center">
-
+  <form class="visita w-full grid grid-cols-1 justify-content-center align-items-center">   
+      <div class="form text-center">  
       <div class="textos-firmas">
-          <span class="text-center font-bold"><strong>Fecha de visita / Date of Visit</strong> </span>
+          <span class="text-center font-bold"><strong>Fecha de visita / Date of Visit</strong></span>
       </div> 
+      <p class="name text-center"></p>
+      <br> 
       <br>
       <img class="firmaCliente" src="" alt="Firma del usuario" id="firma">
       <br>
       <div class="textos-firmas">
-          <span class="text-center font-bold"><strong>Firma / Signature</strong> </span>
+          <span class="text-center font-bold"><strong>Firma / Signature</strong> </span>      
       </div>
-
       </div>
   </form>
   
   <form class="agente w-full grid grid-cols-1 justify-content-center align-items-center">
-   
-      <p class="text-center" id="agente"></p>
- 
       <div class="form text-center">
-
+        <br>
       <div class="textos-firmas">
-          <span class="text-center font-bold"><strong>Agente Inmobiliario</strong> <span>
+          <span class="text-center font-bold"><strong>AGENTE INMOBILIARIO / Real Estate Agent</strong> </span>
+            <p class="text-center" id="agente"></p>
       </div>
       <br>
       <img class="firmaAgente" src="" alt="Firma del usuario" id="firma2">
       <br>
       <div class="textos-firmas">
-          <span class="text-center font-bold"><strong> Firma / Signature</strong> </span> 
+          <span class="text-center font-bold"><strong> FIRMA / Signature</strong> </span> 
       </div>
 
       </div>
@@ -125,22 +131,23 @@
   <br>
   <!-- <a href="https://hannan-piper.com">By Hannan-piper</a> -->
   <div class="grid grid-cols-1 justify-content-center align-items-center">
-    <button class="descargar w-2/4 bg-green-500 hover:bg-red-200 h-25 text-white p-2 rounded mx-auto  mb-10" id="descargar">Descargar PDF</button>
+    <button class="descargar w-2/4 bg-green-500 hover:bg-red-200 h-25 text-white p-2 rounded mx-auto mb-10" id="descargar">Descargar PDF</button>
+
   </div>
 </div>
+
   <script>
-    
-      if (window.opener) {
-          document.querySelector("#firma").src = window.opener.obtenerImagen();
-          document.querySelector("#firma2").src = window.opener.obtenerImagen2();
-          // Imprimir documento. Si no quieres imprimir, remueve la siguiente línea
-         
-      }
-      
-      document.getElementById('descargar').addEventListener('click', function() {
-        window.print();
+    if (window.opener) {
+        document.querySelector("#firma").src = window.opener.obtenerImagen();
+        document.querySelector("#firma2").src = window.opener.obtenerImagen2();
+        // Imprimir documento. Si no quieres imprimir, remueve la siguiente línea
+        
+    }   
+    document.getElementById('descargar').addEventListener('click', function() {
+      window.print();
     });
     if (window.opener) {
+        document.querySelector(".name").innerText = window.opener.document.querySelector(".name").value;
         document.querySelector("#referencia").innerText = window.opener.document.querySelector("#referencia").value;
         document.querySelector("#direccion").innerText = window.opener.document.querySelector("#direccion").value;
         document.querySelector("#poblacion").innerText = window.opener.document.querySelector("#poblacion").value;
